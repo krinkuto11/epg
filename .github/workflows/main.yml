@@ -40,8 +40,10 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
         else
-          echo "Error: No se extrajo el archivo esperado"
+          echo "Error: El archivo no fue extraído correctamente"
           exit 1
+        fi
+
 
 
     - name: Commit y push si cambió el archivo
