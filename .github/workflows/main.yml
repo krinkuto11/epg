@@ -20,24 +20,29 @@ jobs:
     - name: Extraer archivo
       run: |
         gunzip -f archivo.gz  # produce 'archivo'
-
+        
     - name: Verificar si el archivo cambió
       id: compare
       run: |
         if [ -f archivo ]; then
-          if cmp -s archivo ./archivo; then
-            echo "No hay cambios en el archivo."
-            echo "changed=false" >> $GITHUB_OUTPUT
+          if [ -f ./archivo ]; then
+            if cmp -s archivo ./archivo; then
+              echo "No hay cambios en el archivo."
+              echo "changed=false" >> $GITHUB_OUTPUT
+            else
+              echo "El archivo ha cambiado."
+              mv archivo ./archivo
+              echo "changed=true" >> $GITHUB_OUTPUT
+            fi
           else
-            echo "El archivo ha cambiado."
+            echo "No había archivo anterior. Guardando nuevo."
             mv archivo ./archivo
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
         else
-          echo "No existía archivo anterior. Guardando nuevo."
-          mv archivo ./archivo
-          echo "changed=true" >> $GITHUB_OUTPUT
-        fi
+          echo "Error: No se extrajo el archivo esperado"
+          exit 1
+
 
     - name: Commit y push si cambió el archivo
       if: steps.compare.outputs.changed == 'true'
