@@ -15,7 +15,7 @@ jobs:
 
     - name: Descargar archivo .gz
       run: |
-        curl -L "https://epgshare01.online/epgshare01/epg_ripper_ESA1.xml.gz" -o archivo.gz
+        curl -L "https://epgshare01.online/epgshare01/epg_ripper_ES1.xml.gz" -o archivo.gz
 
     - name: Extraer archivo
       run: |
