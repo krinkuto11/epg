@@ -149,6 +149,17 @@ func Rewrite(guide []byte, w io.Writer, edit func(*Programme)) error {
 			}
 			continue
 		}
+		if cd, ok := tok.(xml.CharData); ok && len(bytes.TrimSpace(cd)) == 0 {
+			// Indentation between elements, written as is: the encoder
+			// would escape every tab as &#x9;.
+			if err := e.Flush(); err != nil {
+				return err
+			}
+			if _, err := w.Write(cd); err != nil {
+				return err
+			}
+			continue
+		}
 		if err := e.EncodeToken(xml.CopyToken(tok)); err != nil {
 			return err
 		}

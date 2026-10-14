@@ -28,6 +28,9 @@ func TestRewriteKeepsWhatItDoesNotTouch(t *testing.T) {
 			t.Errorf("missing %s in\n%s", want, out.String())
 		}
 	}
+	if strings.Contains(out.String(), "&#x9;") || !strings.Contains(out.String(), "\n\t<programme ") {
+		t.Errorf("indentation not kept:\n%s", out.String())
+	}
 	chs, err := Channels(out.Bytes())
 	if err != nil || len(chs) != 1 || chs[0].ID != "C" {
 		t.Fatalf("channels %v %v", chs, err)
