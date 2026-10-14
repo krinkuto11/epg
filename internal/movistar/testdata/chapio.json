@@ -1,0 +1,68 @@
+[
+ {
+  "FechaHoraInicio": "1791952200000",
+  "FechaHoraFin": "1791958800000",
+  "TituloSerie": "UEFA Champions League",
+  "Titulo": "UEFA Champions League",
+  "TituloEpisodio": "\"Villarreal - Nápoles\"",
+  "GeneroComAntena": "Fútbol",
+  "Directo": false,
+  "Estreno": true,
+  "Id": 4373248
+ },
+ {
+  "FechaHoraInicio": "1791978900000",
+  "FechaHoraFin": "1791986100000",
+  "TituloSerie": "UEFA Youth League",
+  "Titulo": "UEFA Youth League",
+  "TituloEpisodio": "\"Roma - Real Madrid\"",
+  "GeneroComAntena": "Fútbol",
+  "Directo": true,
+  "Estreno": false,
+  "Id": 4393055
+ },
+ {
+  "FechaHoraInicio": "1791999000000",
+  "FechaHoraFin": "1792003980000",
+  "TituloSerie": "La Previa de Champions",
+  "Titulo": "La Previa de Champions",
+  "TituloEpisodio": "\"14/10/2026\"",
+  "GeneroComAntena": "Programa deportes",
+  "Directo": false,
+  "Estreno": true,
+  "Id": 4360482
+ },
+ {
+  "FechaHoraInicio": "1792003980000",
+  "FechaHoraFin": "1792011600000",
+  "TituloSerie": "UEFA Champions League",
+  "Titulo": "UEFA Champions League",
+  "TituloEpisodio": "\"Roma - Real Madrid\"",
+  "GeneroComAntena": "Fútbol",
+  "Directo": true,
+  "Estreno": false,
+  "Id": 4373254
+ },
+ {
+  "FechaHoraInicio": "1792011600000",
+  "FechaHoraFin": "1792017000000",
+  "TituloSerie": "Noche de Champions",
+  "Titulo": "Noche de Champions",
+  "TituloEpisodio": "\"14/10/2026\"",
+  "GeneroComAntena": "Programa deportes",
+  "Directo": false,
+  "Estreno": true,
+  "Id": 4360422
+ },
+ {
+  "FechaHoraInicio": "1792068600000",
+  "FechaHoraFin": "1792075200000",
+  "TituloSerie": "UEFA Champions League",
+  "Titulo": "UEFA Champions League",
+  "TituloEpisodio": "\"Roma - Real Madrid\"",
+  "GeneroComAntena": "Fútbol",
+  "Directo": false,
+  "Estreno": false,
+  "Id": 4373254
+ }
+]
