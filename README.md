@@ -33,8 +33,8 @@ same minute decides:
 - the programme gets `<live/>` when it is live and `<premiere/>` when it is a first showing. Dispatcharr stores
   these and returns them as `is_live` and `is_premiere`.
 
-A programme with no Movistar airing at the same start time is left untouched, and so are the days beyond the three
-that are read (today and the next two). If Movistar cannot be read, the guide is dobleM's unchanged, and
+A programme with no Movistar airing at the same start time is left untouched, and so are the days beyond the six
+that are read (today and the next five, about as far as Movistar publishes its detailed guide). If Movistar cannot be read, the guide is dobleM's unchanged, and
 `status.json` says why.
 
 Channels are paired by name: the guide's channel id or any display name, ignoring case and repeated spaces, against

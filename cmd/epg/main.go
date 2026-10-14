@@ -46,7 +46,7 @@ type Status struct {
 func main() {
 	base := flag.String("base", defaultBase, "base XMLTV guide (URL or file)")
 	out := flag.String("out", "dist", "output directory")
-	days := flag.Int("days", 3, "days of Movistar's guide to read, from today")
+	days := flag.Int("days", 6, "days of Movistar's guide to read, from today")
 	workers := flag.Int("workers", 6, "concurrent Movistar requests")
 	overridesPath := flag.String("overrides", "channels.json", "guide id -> Movistar code overrides (\"\" = never overlay); optional")
 	flag.Parse()
